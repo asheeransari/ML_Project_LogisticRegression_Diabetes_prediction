@@ -72,64 +72,51 @@
 </head>
 <body>
     
-    {% if not result %}
+    {% if result is not defined %}
 
 
     <div class="container">
-        <h2>Algerian Forest Fire Prediction Form</h2>
+        <h2>Diabetes Prediction Form</h2>
 
-        <form action="form" method="post">
+        <form action="/form" method="post">
             <div class="input-group">
-                <label>Temperature</label>
-                <input type="text" placeholder="Enter Temperature" name="Temperature" required>
+                <label>Pregnancies</label>
+                <input type="text" placeholder="Enter Pregnancies" name="Pregnancies">
             </div>
 
             <div class="input-group">
-                <label>Relative humidity</label>
-                <input type="text" placeholder="Enter Relative humidity" name = "Relativehumidity" required>
+                <label>Glucose</label>
+                <input type="text" placeholder="Enter Glucose" name = "Glucose" required>
             </div>
 
             <div class="input-group">
-                <label>Wind speed</label>
-                <input type="text" placeholder="Enter Wind speed" name = "Windspeed">
+                <label>Blood Pressure</label>
+                <input type="text" placeholder="Enter Blood Pressure" name = "BloodPressure">
             </div>
 
             <div class="input-group">
-                <label>Rain</label>
-                <input type="text" placeholder="Enter Rain" name = "Rain">
+                <label>Skin Thickness</label>
+                <input type="text" placeholder="Enter Skin Thickness" name = "SkinThickness">
             </div>
 
             <div class="input-group">
-                <label>Fine Fuel Moisture Code</label>
-                <input type="text" placeholder="Enter Fine Fuel Moisture Code" name = "FineFuelMoistureCode">
+                <label>Insulin</label>
+                <input type="text" placeholder="Enter Insulin" name = "Insulin">
             </div>
 
             <div class="input-group">
-                <label>Duff Moisture Code</label>
-                <input type="text" placeholder="Enter your Duff Moisture Code" name = "DuffMoistureCode">
+                <label>BMI</label>
+                <input type="text" placeholder="Enter BMI" name = "BMI">
             </div>
 
             <div class="input-group">
-                <label>Initial Spread Index</label>
-                <input type="text" placeholder="Enter Initial Spread Index" name = "InitialSpreadIndex">
+                <label>Diabetes Pedigree Function</label>
+                <input type="text" placeholder="Enter Diabetes Pedigree Function" name = "DiabetesPedigreeFunction">
             </div>
 
             <div class="input-group">
-                <label>Classes</label>
-                <select name = 'Classes' required>
-                    <option>Select Status</option>
-                    <option>Fire</option>
-                    <option>Not Fire</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label>Region</label>
-                <select name = 'Region' required>
-                    <option>Select Region</option>
-                    <option>Bejaia region</option>
-                    <option>Sidi Bel-abbes region</option>
-                </select>
+                <label>Age</label>
+                <input type="text" placeholder="Enter Age" name = "Age">
             </div>
 
 
@@ -139,7 +126,8 @@
     {% endif %}
 
     <div class="answer_container">
-        {% if result %}
+        {% if result is defined %}
+
             <h2>Result:</h2>
             <h4><center><p>{{ result }}</p></center></h4>
         {% endif %}
